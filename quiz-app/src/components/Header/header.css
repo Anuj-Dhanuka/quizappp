@@ -1,0 +1,21 @@
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(243, 243, 243);
+    padding: 1.2rem;
+  }
+
+  .nav-logout-btn {
+    background-color: #0967d2;
+    font-family: Roboto;
+    color: #fff;
+    padding: 8px 20px;
+    border: none;
+    border-radius: 6px;
+  }
+
+  @media screen and (max-width: 768px) {
+    .quiz-nav-heading {
+        font-size: 22px;
+    }
+  }
