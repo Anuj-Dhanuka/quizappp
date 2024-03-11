@@ -5,8 +5,10 @@ const Header = () => {
     const navigate = useNavigate()
 
     const onLogout = () => {
+        localStorage.removeItem("token")
         navigate("/login")
     }
+    
     return (
         <nav className="nav-header">
         <div>

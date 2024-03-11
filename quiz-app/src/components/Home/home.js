@@ -7,13 +7,18 @@ import { quizState } from "../../App";
 
 import { useNavigate } from "react-router-dom";
 
-const Home = (props) => {
-    const {count, setCount, lock, setlock, score, setScore} = useContext(quizState)
+
+
+const Home = () => {
+    const {count, setCount, lock, setlock, score, setScore, questionsData} = useContext(quizState)
+    
     
     const navigate = useNavigate()
-    
+    const token = localStorage.getItem("token")
+    console.log(token)
+
     const onIncrement = () => {    
-        const {questionsData} = props
+        
         const dataLen = questionsData.length
         if (lock ) {
             setlock(false)
@@ -36,7 +41,7 @@ const Home = (props) => {
     }
 
     const onClickoption = (e, answer) => {
-        const {questionsData} = props
+        
         const {ans} = questionsData[count]
         if (lock === false) {
             if (answer === ans) {
@@ -56,7 +61,7 @@ const Home = (props) => {
 
     }
     
-        const {questionsData} = props
+        
         const {question, option1, option2, option3, option4} = questionsData[count]
         
 
